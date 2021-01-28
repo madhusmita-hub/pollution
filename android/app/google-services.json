@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "631324553384",
+    "project_id": "pollutionrn",
+    "storage_bucket": "pollutionrn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631324553384:android:bd35995ac6c88b28e6129d",
+        "android_client_info": {
+          "package_name": "com.pollution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631324553384-30t9f86ullem3g5ht6pihtcp11m5e2rr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pollution",
+            "certificate_hash": "80498081e518e52b065b6b2bf438c2bdfabefd63"
+          }
+        },
+        {
+          "client_id": "631324553384-cbug9luo0f1601sm3cin2j6f1marfub2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pollution",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "631324553384-g56tb4ao5d44ajdcdhrni0sobq099klf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFZLe-9eKBtA4CbYiOxYrd1c_ImM3zsQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631324553384-g56tb4ao5d44ajdcdhrni0sobq099klf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
