@@ -43,20 +43,21 @@ function Dashboard() {
 
 const App = () => {
   return (
-    // <>
-    //   <NavigationContainer>
-    //         <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerStyle: { backgroundColor: Theme.themeColor}, headerTitleStyle: { color:'#fff', fontFamily:'UbuntuMedium', fontSize:22} }}>
-    //           <Stack.Screen name="Splash" component={Splash} options={{ headerMode:"none",headerShown:false }}/>
-    //           <Stack.Screen name="Login" component={Login} options={{ title: 'Pollution Monitoring' }}/>
+    <>
+      <NavigationContainer>
+            <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerStyle: { backgroundColor: Theme.themeColor}, headerTitleStyle: { color:'#fff', fontFamily:'UbuntuMedium', fontSize:22} }}>
+              <Stack.Screen name="Splash" component={Splash} options={{ headerMode:"none",headerShown:false }}/>
+              <Stack.Screen name="Login" component={Login} options={{ title: 'Pollution Monitoring' }}/>
 
-    //           <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
-    //           <Stack.Screen name="DataDetails" component={Detailscsreeen} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
-    //         {/*<Stack.Screen name="Settings" component={Settings} />*/}
-    //         {/* <Stack.Screen name="Realtime" component={RealTimeDB} /> */}
-    //         </Stack.Navigator>
-    //   </NavigationContainer>
-    // </>
-    <Data2/>
+              {/* <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/> */}
+              <Stack.Screen name="Dashboard" component={Data2} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
+              <Stack.Screen name="DataDetails" component={Detailscsreeen} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
+            {/*<Stack.Screen name="Settings" component={Settings} />*/}
+            {/* <Stack.Screen name="Realtime" component={RealTimeDB} /> */}
+            </Stack.Navigator>
+      </NavigationContainer>
+    </>
+    // <Data2/>
   );
 };
 

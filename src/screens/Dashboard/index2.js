@@ -63,7 +63,9 @@ class Dashboard extends Component {
       <View style={[styles.container, {marginHorizontal: width * 0.15}]}>
        
         <View style={styles.itemRow}>
-          <TouchableOpacity style={styles.itemContainer}>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
             <View style={styles.itemInner}>
               <Text style={styles.itemTxt}>CH2: {item.CH2}</Text>
               {/* <Text style={styles.itemTxt}>{item.CO2}</Text> */}
@@ -127,8 +129,8 @@ class Dashboard extends Component {
             fontFamily: 'UbuntuBold',
             fontSize: 23,
             color: '#fff',
-            // marginBottom: 10,
-            backgroundColor: Theme.themeColor
+            backgroundColor: Theme.themeColor,
+            textAlign:"center"
           }}>
           DASHBOARD
         </Text>
