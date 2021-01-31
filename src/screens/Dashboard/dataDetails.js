@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Theme from '../../styles/Theme';
+import Header from '../../components/header';
 
 class DataDetails extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class DataDetails extends Component {
 
   componentDidMount = () => {
     const myData = this.props.route.params.data;
-    alert(JSON.stringify(myData));
+    // alert(JSON.stringify(myData));
     this.setState({
       CH4: myData.CH4,
       CO2: myData.CO2,
@@ -33,15 +34,17 @@ class DataDetails extends Component {
   render() {
     // alert(JSON.stringify(this.state.CH4))
     return (
-      <View style={{flex: 1}}>
-        <View style={styles.card}></View>
-        <Text>CH4: {this.state.CH4}</Text>
-        <Text>CO2: {this.state.CO2}</Text>
-        <Text>NH3: {this.state.NH3}</Text>
-        <Text>O2: {this.state.O2}</Text>
-        <Text>PM2: {this.state.PM2_5}</Text>
-        <Text>SO2: {this.state.SO2}</Text>
-        <Text>WindSpeed: {this.state.Windspeed}</Text>
+      <View style={{flex:1}}>
+        <Header title="Pollution Monitoring Details" />
+        <View style={styles.View}>
+        <Text style={styles.TextColor}>CH4: {this.state.CH4}</Text>
+        <Text style={styles.TextColor}>CO2: {this.state.CO2}</Text>
+        <Text style={styles.TextColor}>NH3: {this.state.NH3}</Text>
+        <Text style={styles.TextColor}>O2: {this.state.O2}</Text>
+        <Text style={styles.TextColor}>PM2: {this.state.PM2_5}</Text>
+        <Text style={styles.TextColor}>SO2: {this.state.SO2}</Text>
+        <Text style={styles.TextColor}>WindSpeed: {this.state.Windspeed}</Text>
+        </View>
       </View>
     );
   }
@@ -50,12 +53,16 @@ class DataDetails extends Component {
 export default DataDetails;
 
 const styles = StyleSheet.create({
-  card: {
+  View: {
+    // flex:1/2,
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: '15%',
+    // marginHorizontal: '15%',
     backgroundColor: Theme.themeColor,
-    height: 100,
-
+    height: "100%",
+    width:"100%"
   },
+  TextColor:{
+    color:"#fff"
+  }
 });

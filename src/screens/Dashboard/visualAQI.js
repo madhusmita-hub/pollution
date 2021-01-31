@@ -19,12 +19,12 @@ export default function Dashboard() {
   const [selectedIndex, setSelectedIndex] = useState(1);
 
   const data = [
-    {id: 0, value: 'Good', color: '#00AF52'},
-    {id: 1, value: 'Moderate', color: '#FEFD05'},
-    {id: 2, value: 'Unhealthy for sensitive', color: '#FF9E03'},
-    {id: 3, value: 'Unhealthy', color: '#F2061C'},
-    {id: 4, value: 'Very unhealthy', color: '#752E9E'},
-    {id: 5, value: 'Hazardous', color: '#9B3A31'},
+    {id: 0, value: 'Good', color: '#00AF52', aqi: 30.354},
+    {id: 1, value: 'Moderate', color: '#FEFD05', aqi: 90.001},
+    {id: 2, value: 'Unhealthy for sensitive', color: '#FF9E03', aqi: 110.76},
+    {id: 3, value: 'Unhealthy', color: '#F2061C', aqi: 180.45},
+    {id: 4, value: 'Very unhealthy', color: '#752E9E', aqi: 240.99},
+    {id: 5, value: 'Hazardous', color: '#9B3A31', aqi: 330.99},
   ];
 
   const _renderItem = ({item, index}) => {
@@ -66,6 +66,7 @@ export default function Dashboard() {
           }}>
           {item.value}
         </Text>
+        <Text>{item.aqi}</Text>
         <View
           style={{
             height: 20,
@@ -196,7 +197,7 @@ export default function Dashboard() {
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
               }}>
-              <Text
+              {/* <Text
                 style={{
                   flex: 2,
                   color: '#fff',
@@ -215,7 +216,7 @@ export default function Dashboard() {
                   textAlign: 'center',
                 }}>
                 40%
-              </Text>
+              </Text> */}
             </View>
 
             <TouchableOpacity style={styles.loginBtn} onPress={() => {}}>

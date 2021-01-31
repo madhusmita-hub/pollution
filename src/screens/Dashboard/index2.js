@@ -67,35 +67,60 @@ class Dashboard extends Component {
           onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
           style={styles.itemContainer}>
             <View style={styles.itemInner}>
-              <Text style={styles.itemTxt}>CH2: {item.CH2}</Text>
-              {/* <Text style={styles.itemTxt}>{item.CO2}</Text> */}
-              {/* <Text style={styles.subTxt}>2</Text> */}
+              <Text style={styles.itemTxt}>CH4: {item.CH4}</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.itemContainer}>
+          <TouchableOpacity 
+           onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
             <View style={styles.itemInner}>
               <Text style={styles.itemTxt}>CO2: {item.CO2}</Text>
               {/* <Text style={styles.itemTxt}>{item.CO2}</Text> */}
               {/* <Text style={styles.subTxt}>2</Text> */}
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.itemContainer}>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
             <View style={styles.itemInner}>
               <Text style={styles.itemTxt}>NH3: {item.NH3}</Text>
               {/* <Text style={styles.itemTxt}>{item.CO2}</Text> */}
               {/* <Text style={styles.subTxt}>2</Text> */}
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.itemContainer}>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
             <View style={styles.itemInner}>
               <Text style={styles.itemTxt}>O2: {item.O2}</Text>
-              {/* <Text style={styles.itemTxt}>{item.CO2}</Text> */}
-              {/* <Text style={styles.subTxt}>2</Text> */}
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.itemContainer}>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
             <View style={styles.itemInner}>
-              <Text style={styles.itemTxt}>O2: {item.O2}</Text>
+              <Text style={styles.itemTxt}>O3: {item.O3}</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
+            <View style={styles.itemInner}>
+              <Text style={styles.itemTxt}>PM2_5: {item.PM2_5}</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
+            <View style={styles.itemInner}>
+              <Text style={styles.itemTxt}>SO2: {item.SO2}</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity 
+          onPress={() => this.props.navigation.navigate("DataDetails", { data: item })}
+          style={styles.itemContainer}>
+            <View style={styles.itemInner}>
+              <Text style={styles.itemTxt}>Windspeed: {item.Windspeed}</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -135,7 +160,7 @@ class Dashboard extends Component {
           DASHBOARD
         </Text>
         <FlatList
-          numColumns={3}
+          numColumns={2}
           showsVerticalScrollIndicator={false}
           keyExtractor={this.keyExtractor}
           data={this.state.mylist}

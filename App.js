@@ -17,6 +17,7 @@ import Splash from './src/screens/Splash';
 import Login from './src/screens/Login';
 import About from './src/screens/About';
 import Home from './src/screens/Dashboard';
+import Home2 from './src/screens/Dashboard/index2';
 import VisualAQI from './src/screens/Dashboard/visualAQI';
 import Detailscsreeen from './src/screens/Dashboard/dataDetails';
 
@@ -32,7 +33,7 @@ import RealTimeDB from './src/screens/realtimeDB';
 function Dashboard() {
   return (
     <Drawer.Navigator initialRouteName="Home" drawerContent={(props) => <DrawerComponent {...props} />}>
-      <Drawer.Screen name="Home" component={Home}/>
+      <Drawer.Screen name="Home" component={Home2}/>
       <Drawer.Screen name="VisualAQI" component={VisualAQI}/>
       <Drawer.Screen name="About" component={About} />
 
@@ -49,8 +50,8 @@ const App = () => {
               <Stack.Screen name="Splash" component={Splash} options={{ headerMode:"none",headerShown:false }}/>
               <Stack.Screen name="Login" component={Login} options={{ title: 'Pollution Monitoring' }}/>
 
-              {/* <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/> */}
-              <Stack.Screen name="Dashboard" component={Data2} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
+              <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
+              {/* <Stack.Screen name="Dashboard2" component={Data2} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/> */}
               <Stack.Screen name="DataDetails" component={Detailscsreeen} options={{ title: 'Pollution Monitoring' }} options={{ headerMode:"none",headerShown:false }}/>
             {/*<Stack.Screen name="Settings" component={Settings} />*/}
             {/* <Stack.Screen name="Realtime" component={RealTimeDB} /> */}
