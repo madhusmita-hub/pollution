@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {
   View,
   Text,
@@ -12,12 +12,30 @@ import {
 import Theme from '../../styles/Theme';
 import Header from '../../components/header';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import database from '../../../config';
+import * as firebase from 'firebase';
 
 const {width, height} = Dimensions.get('window');
+
+
 
 export default function Dashboard() {
   const [selectedIndex, setSelectedIndex] = useState(1);
 
+
+  // useEffect(() => {
+  //   const onChildAdd = database()
+  //     .ref('/data2')
+  //     .on('child_added', snapshot => {
+  //       console.log('A new node has been added', snapshot.val());
+  //     });
+
+  //   // Stop listening for updates when no longer required
+  //   return () =>
+  //     database()
+  //       .ref('/data2')
+  //       .off('child_added', onChildAdd);
+  // }, []);
   const data = [
     {id: 0, value: 'Good', color: '#00AF52', aqi: 30.354},
     {id: 1, value: 'Moderate', color: '#FEFD05', aqi: 90.001},
@@ -38,7 +56,7 @@ export default function Dashboard() {
     var isLeftEdge = index == 0 ? true : false;
     var isRightEdge = index == data.length - 1 ? true : false;
 
-    var middleBorder = index == selectedIndex ? 2 : 0.5;
+    var middleBorder = index == selectedIndex ? 3 : 0.5;
 
     return (
       <TouchableOpacity
@@ -116,7 +134,7 @@ export default function Dashboard() {
                 fontSize: 16,
                 paddingVertical: 2,
               }}>
-              85
+           110.76
             </Text>
             <View
               style={{

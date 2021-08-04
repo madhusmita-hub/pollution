@@ -1,5 +1,7 @@
 // import * as React from 'react';
-import firebase from '@react-native-firebase/app';
+// import firebase from '@react-native-firebase/app';
+import * as firebase from 'firebase';
+
 // import database from '@react-native-firebase/database';
 // import Appc from './App';
 

@@ -17,7 +17,9 @@ export default function Header(props) {
         paddingLeft:5 ,
         flexDirection:"row"
       }}>
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={()=> navigation.openDrawer()}
+        >
         <Image source={require("../assets/img/menu.png")}
         style={{height:20,width:20, marginTop:10, marginRight:10}}
         />
